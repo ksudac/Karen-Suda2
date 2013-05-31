@@ -1,0 +1,251 @@
+body{
+    font-family: 'Josefin Slab', serif;
+    font-size: 16pt;
+    background-color: #fcf5e9;
+}
+
+.h3, h3{
+    font-size: 20pt;
+    font-weight: 900;
+    color:white;
+}
+
+.navigation{
+    list-style: none;
+}
+
+.navigation > li {
+    text-align: center;
+    font-size: 14pt;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right: 15px;
+    display: inline-block;
+    width:101px;
+}
+
+.navigation-smaller > li {
+    font-size: 10pt !important;
+    text-decoration: underline !important;
+    padding-right: 0 !important;
+    width:70px !important;
+}
+
+.navigation > li > a {
+    color: #fcf5e9;
+    text-decoration: none;
+}
+
+.navigation > li > a:hover {
+    color:#8dc3d1;
+}
+
+
+.nav-selected {
+    background: url('../img/circle.png') no-repeat;
+    width:101px;
+    height:41px;
+}
+
+.logo{
+    margin-top: -40px;
+}
+
+
+.top-block{
+    width:100%;
+    height:150px;
+    background-color: black;
+}
+
+.nav-block{
+    width:100%;
+    height:50px;
+    background-color: black;
+    text-align: center;
+    position:fixed;
+    z-index: 10;
+}
+
+.white-block{
+    width:100%;
+    height:100%;
+    text-align: center;
+    background-color: #fcf5e9;
+}
+
+.teal-block{
+    width:100%;
+    height:190px;
+    background-color: #8dc3d1;
+    text-align: center;
+    line-height: 29px;
+}
+
+.black-block{
+    width:100%;
+    height:100px;
+    background-color: black;
+    text-align: center;
+    color: #fcf5e9;
+    font-size: 10pt;
+}
+
+.logo {
+    width:100px;
+    height:auto;
+    position: fixed;
+    margin-right: auto;
+    margin-left: auto;
+    left:45%;
+    top:35px;
+    z-index: 20;
+}
+
+.logo-home{
+    top:240px;
+}
+
+.thumbnail{
+    width:350px;
+    height:auto;
+    border: solid thick white;
+    margin:20px;
+}
+
+/* Social Media Icon set */
+ul.socialicons 		            { list-style-type: none; margin-top: -67px; margin-right:50px;}
+ul.socialicons li		    { list-style-type: none; display: inline-block; float: right; padding: 0 5px 0 0; }
+ul.color li a 			    { background: url('../img/supermassivecsspriteicons2.png') no-repeat 0 0; }
+ul.socialicons li a 		    { text-indent: -9999px; width: 32px; height: 33px; display: block; overflow: hidden; margin: 2px; }
+ul.socialicons li a.linkedin 	    { background-position: 0 -292px; }
+ul.socialicons li a.linkedin:hover  { background-position: -38px -292px; }
+ul.socialicons li a.github 	    { background-position: 0 -981px; }
+ul.socialicons li a.github:hover    { background-position: -38px -981px; }
+ul.socialicons li a.email 	    { background-position: 0 -1623px; }
+ul.socialicons li a.email:hover     { background-position: -38px -1623px; }
+ul.socialicons li a.facebook 	    { background-position: 0 -73px; }
+ul.socialicons li a.facebook:hover  { background-position: -38px -73px; }
+
+.white{
+    color:#fcf5e9;
+}
+
+.red{
+    color:#d03248;
+}
+
+.bold-italic{
+ font-weight: 900;
+ font-style: italic;
+}
+
+
+
+td{
+    text-align: left;
+    line-height: 20px;
+    vertical-align: top;
+    padding: 2px;
+    min-width: 100px;
+}
+.head{
+    padding-top:7px;
+}
+
+input[type="text"], textarea{
+    width:400px;
+    line-height: 16px;
+}
+
+input[type="submit"]{
+    float: right;
+}
+
+.message{
+    height:70px;
+}
+
+.form-table{
+    margin-left: 30%;
+    margin-top:-150px;
+}
+
+.karen-image, .karen-image-hidden{
+    float: right;
+    margin-right: 60px;
+    margin-top: -50px;
+}
+
+.karen-arrow > img{
+    width: 120px;
+    height: auto;
+    float: right;
+    margin-right: 20px;
+}
+
+.karen-arrow, .karen-image-hidden {
+    display: none;
+}
+
+.heart{
+    display: none;
+    padding-left:11px;
+    padding-right:11px;
+    margin-top: -5px;
+    margin-bottom:-5px;
+}
+
+.ggbridge{
+    display: none;
+    padding-left:11px;
+    padding-right:10px;
+    margin-top: -5px;
+    margin-bottom:-5px;
+}
+
+.clear{
+    clear: both;
+}
+
+.teal-block > a {
+    text-decoration: none;
+}
+
+.teal-block > a:hover {
+    text-decoration: underline;
+}
+
+.contact-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.contact-account > td, .contact-title > td{
+    width: 160px;
+    text-align: center;
+}
+
+.contact-icon > td {
+    width: 80px;
+    padding-left: 40px;
+}
+
+.contact-title > td > a, .contact-title  {
+    color: #d03248;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-title > td > a:hover  {
+    text-decoration: underline;
+}
+
+.contact-account {
+    color: #8dc3d1;
+    font-size: 12pt;
+    text-align: center;
+}
