@@ -1,7 +1,12 @@
+html{
+    overflow-y: scroll;
+}
+
 body{
     font-family: 'Josefin Slab', serif;
     font-size: 16pt;
     background-color: #fcf5e9;
+    min-width: 1000px;
 }
 
 .h3, h3{
@@ -72,17 +77,32 @@ body{
     height:100%;
     text-align: center;
     background-color: #fcf5e9;
+    padding: 40px 0;
+}
+
+.white-spacer{
+    width:100%;
+    min-height: 30px;
+    height:70px;
+    background-color: #fcf5e9;
 }
 
 .teal-block{
     width:100%;
-    height:190px;
+    height:100px;
     background-color: #8dc3d1;
     text-align: center;
     line-height: 29px;
+    padding-top: 23px;
 }
 
 .black-block{
+    width:100%;
+    height:50px;
+    background-color: black;
+}
+
+.black-footer{
     width:100%;
     height:100px;
     background-color: black;
@@ -111,6 +131,10 @@ body{
     height:auto;
     border: solid thick white;
     margin:20px;
+}
+
+#hidden-social-nav{
+    display: none;
 }
 
 /* Social Media Icon set */
@@ -188,19 +212,19 @@ input[type="submit"]{
     display: none;
 }
 
-.heart{
+#heart{
     display: none;
-    padding-left:11px;
+    padding-left:12px;
     padding-right:11px;
     margin-top: -5px;
     margin-bottom:-5px;
 }
 
-.ggbridge{
+#ggbridge{
     display: none;
     padding-left:11px;
-    padding-right:10px;
-    margin-top: -5px;
+    padding-right:11px;
+    margin-top: -7px;
     margin-bottom:-5px;
 }
 
@@ -248,4 +272,143 @@ input[type="submit"]{
     color: #8dc3d1;
     font-size: 12pt;
     text-align: center;
+}
+
+.about-me{
+    font-family: sans-serif;
+    font-size: 10pt;
+    list-style: none;
+    padding: 0 0 30px 0;
+    
+}
+.about-me > li{
+    display: inline-block;
+    text-align: justify;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.about-text {
+    width:340px;
+}
+
+.about-img{
+    width:250px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.pill-box{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    height:230px;
+    width:170px;
+    color: black;
+    border: #e7e7e7 solid thin;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#efeeef));
+    background: -webkit-linear-gradient(top, ffffff, #efeeef);
+    background: -moz-linear-gradient(top, ffffff, #efeeef);
+    background: -ms-linear-gradient(top, ffffff, #efeeef);
+    background: -o-linear-gradient(top, ffffff, #efeeef);
+    display: inline-block;
+}
+
+
+.hidden-hover-info > p{
+    text-align: center;
+    line-height: 25px;
+    padding: 5px 40px 4px 40px;
+
+}
+
+.hidden-hover-info > img {
+    text-align: center;
+    position: absolute;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hidden-education > img {
+    margin-left: 240px;
+}
+
+#hidden-certificate  > img {
+    margin-left: 500px;
+}
+
+#hidden-experiance  > img {
+    margin-left: 580px;
+}
+
+#hidden-education, #hidden-experiance, #hidden-certificate  {
+    display: none;
+}
+
+.hidden-hover-box{
+    width: 900px;
+    height:150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blue-underline{
+    color: #456896;
+    text-decoration: underline; 
+}
+
+.pill-box > h5 {
+    font-size: 18pt;
+    color:#d03248;
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+.pill-text {
+    font-size: 12pt;
+    color:#8dc3d1;
+    font-family: sans-serif;
+}
+
+.hidden-hover-info > h2 {
+    font-size: 32pt;
+}
+
+.hidden-hover-info > h1, .social-feeds > h1 {
+    font-size: 38pt;
+}
+.social-feeds{
+    padding: 50px;
+}
+
+.horizontal-line{
+	background-color: #ded8d6;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+	height:1px;
+	width:90%;
+	margin-bottom: 0;
+	margin-top: 4px;
+}
+
+.horizontal-line2{
+	background-color: silver;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+	height:1px;
+	width:90%;
+	margin-bottom: 10px;
+	margin-top: 0;
 }
