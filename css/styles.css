@@ -6,7 +6,7 @@ body{
     font-family: 'Josefin Slab', serif;
     font-size: 16pt;
     background-color: #fcf5e9;
-    min-width: 1000px;
+    min-width: 1060px;
 }
 
 .h3, h3{
@@ -15,7 +15,7 @@ body{
     color:white;
 }
 
-.navigation{
+.navigation, .navigation-smaller {
     list-style: none;
 }
 
@@ -33,10 +33,15 @@ body{
     font-size: 10pt !important;
     text-decoration: underline !important;
     padding-right: 0 !important;
+    padding-top:15px;
+    padding-bottom:15px;
     width:70px !important;
+    text-align: center;
+    display: inline-block;
+    width:101px;
 }
 
-.navigation > li > a {
+.navigation > li > a, .navigation-smaller > li > a {
     color: #fcf5e9;
     text-decoration: none;
 }
@@ -45,25 +50,33 @@ body{
     color:#8dc3d1;
 }
 
-
 .nav-selected {
     background: url('../img/circle.png') no-repeat;
     width:101px;
     height:41px;
 }
 
-.logo{
-    margin-top: -40px;
+.logo-container{
+    text-align: center;
+    padding-right: 90px;
 }
 
+.logo {
+    width:100px;
+    margin: -20px auto 0 auto;
+    display: inline-block;
+    position: fixed;
+    z-index: 20;
+}
 
-.top-block{
+.home-spacer{
     width:100%;
-    height:150px;
+    height:400px;
     background-color: black;
 }
 
 .nav-block{
+    min-width: 1060px;
     width:100%;
     height:50px;
     background-color: black;
@@ -104,26 +117,11 @@ body{
 
 .black-footer{
     width:100%;
-    height:100px;
+    height:120px;
     background-color: black;
     text-align: center;
     color: #fcf5e9;
     font-size: 10pt;
-}
-
-.logo {
-    width:100px;
-    height:auto;
-    position: fixed;
-    margin-right: auto;
-    margin-left: auto;
-    left:45%;
-    top:35px;
-    z-index: 20;
-}
-
-.logo-home{
-    top:240px;
 }
 
 .thumbnail{
@@ -165,7 +163,6 @@ ul.socialicons li a.facebook:hover  { background-position: -38px -73px; }
 }
 
 
-
 td{
     text-align: left;
     line-height: 20px;
@@ -191,8 +188,9 @@ input[type="submit"]{
 }
 
 .form-table{
-    margin-left: 30%;
-    margin-top:-150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
 }
 
 .karen-image, .karen-image-hidden{
@@ -226,6 +224,14 @@ input[type="submit"]{
     padding-right:11px;
     margin-top: -7px;
     margin-bottom:-5px;
+}
+
+#sunglass{
+    display: none;
+    padding-left:3px;
+    padding-right:3px;
+    margin-top: -5px;
+    margin-bottom:-2px;
 }
 
 .clear{
@@ -290,6 +296,7 @@ input[type="submit"]{
 
 .about-text {
     width:340px;
+    line-height: 18px;
 }
 
 .about-img{
@@ -372,6 +379,7 @@ input[type="submit"]{
     color:#d03248;
     padding: 20px 0;
     font-family: sans-serif;
+    text-decoration: underline;
 }
 
 .pill-text {
@@ -411,4 +419,13 @@ input[type="submit"]{
 	width:90%;
 	margin-bottom: 10px;
 	margin-top: 0;
+}
+
+label.error {
+    width: 250px;
+    display: inline;
+    color: red;
+}
+
+.custom-button{
 }

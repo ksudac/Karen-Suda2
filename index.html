@@ -15,7 +15,8 @@ Last updated 6/3/2013
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="shortcut icon" href="img/favicon.png" />
 
-<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
+
 
 </head>
 
@@ -23,58 +24,61 @@ Last updated 6/3/2013
     
   
     
-<img src="img/logo.png" class="logo" />
+
+
 
 <div class="nav-block">
     <ul class="navigation">
-        <li><a href="#home" title="home">Home</a></li>
-        <li><a href="#about" title="about">About</a></li>
-        <li><span>....................................................</span></li>
-        <li><a href="#projects" title="street-cred">Street Cred</a></li>
-        <li><a href="#contact" title="contact">Contact</a></li>
+        <li class="highlight"><a href="#about" title="about">About</a></li>
+        <li class="highlight"><a href="#projects" title="street-cred">Street Cred</a></li>
+        <li><a href="#home" title="home" class="logo-container"><img src="img/logo.png" class="logo" alt="logo"/></a></li>
+        <li class="highlight"><a href="#latest" title="latest">Latest</a></li>
+        <li class="highlight"><a href="#contact" title="contact">Contact</a></li>
     </ul>
     
     <ul class="socialicons color" id="hidden-social-nav">
         <li><a href="https://github.com/ksudac" class="github" target="_blank">github</a></li>
         <li><a href="https://www.facebook.com/k.sudacederquist" class="facebook" target="_blank">facebook</a></li>
-        <li><a href="href="mailto:ksudac@gmail.com"" class="email" target="_blank">email</a></li>
+        <li><a href="mailto:ksudac@gmail.com" class="email" target="_blank">email</a></li>
         <li><a href="http://www.linkedin.com/pub/karen-suda-cederquist/18/320/303" class="linkedin" target="_blank">linkedin</a></li>
     </ul>
 </div>
 
-<div id="home">
-    <div class="black-block"></div>
-    <div class="black-block"></div>
-    <div class="black-block"></div>
-    <div class="top-block happy" style="color:white; font-size: 70pt; text-align: center; padding-top: 50px;">
+<div id="home" class="location">
+    <h1></h1>
+    <div class="home-spacer happy" style="color:white; font-size: 70pt; text-align: center; padding-top: 250px;">
         <ul>
             <li><span id="happy-greeting"></span></li>
         </ul>
     </div>
-    <div class="black-block"></div>
-    <div class="black-block"></div>
+    <h1></h1>
     <div class="black-block"></div>
 </div> 
 
-
-<div id="about">
+<div id="about" class="location">
     <div class="black-block"></div>
+    <h1></h1>
     <div class="teal-block">
         Hello! My name is Karen Suda and I'm a <span class="bold-italic">Front-End </span>Web Developer from
-        <span class="white" id="sanfran">San Francisco.</span><img src="img/ggbridge.png" alt="" id="ggbridge"><br/>
+        <span class="white" id="sanfran">San Francisco.</span><img src="img/ggbridge.png" alt="golden-gate-bridge" id="ggbridge" /><br/>
         I am ubber passionate about the Web, have a background in Engineering, and love all-things Tech!<br/><br/><br/><br/>
     </div>
     <div class="white-block">
+        <br /><br />
         <ul class="about-me">      
             <li class="about-text">About me and my webdevelopment journey! Erant dicit id sea, solum ignota dolorem mei et. Usu an agam dolorum, at sumo nostro invenire sed. Te mel justo commune antiopam, ea sed laudem facete, per ignota graeco dissentiet no. Dicam tincidunt eam no, debitis alienum convenire in vel, no nobis omnesque mei. Alienum recteque eum ut, cu his feugiat salutatus, insolens vulputate constituto eam ne.</li>
             <li class="about-img"><img src="img/karen-paris.png" alt="" /></li>
             <li class="about-text">
-                When I'm not coding, you can find me anywhere outdoors - wine tasting, hiking, chilling at the park with friends, strolling around the city or even getting dirty on my family's pistachio farm.
-                I'm travel addict who loves experiencing the cultures of the world. I've encountered the most friendly people in a small impoverished villages and the funniest people on the Inca Trail in the Andes.
-                I am always up for an adventure, down to try new things, and stoked to meet new people...Did that sound like an match.com profile? Hope not, I'm just a geek looking for something new to code!
+                When I'm not coding, you can find me anywhere outdoors - wine tasting, hiking, sailing in the bay, chilling at the park with friends or even getting dirty on my family's pistachio farm.
+                Nothing brings me more joy then a <a href="http://www.youtube.com/watch?v=vM1i1yWHNwc&t=0m38s" target="_blank">Banh Mi</a> followed by hi-chews. 
+                I am always up for an adventure, down to try new things, and stoked to meet new people...did that sound like an match.com profile? Hope not, I'm just a geek looking for something new to code!
             </li>
         </ul>
         
+        <br /><br /><br />
+        <div class="horizontal-line"></div>
+        <div class="horizontal-line2"></div>
+        <br /><br /><br />
         
         <div class="hidden-hover-box">
                         
@@ -85,19 +89,19 @@ Last updated 6/3/2013
             <div class="hidden-hover-info" id="hidden-education">
                 <h2>Problem solving guru who can solve any challenging problem.</h2>
                 <p>I have a broad understanding of core scientific concepts and mathmatical logic. It's not CS, but I find innovative solutions to challenging problems. </p>
-                <img src="img/arrow-left.png" width="69" height="69" class="arrow">
+                <img src="img/arrow-left.png" width="69" height="69" class="arrow" alt="arrow" />
             </div>
             
             <div class="hidden-hover-info" id="hidden-certificate">        
                 <h2>Trained and certified in front-end web development.</h2>
                 <p>I have learned both the lastest coding techniques and object-oriented fundamentals that are essential for adapting to changes in technology.</p>
-                <img src="img/arrow-left.png" width="69" height="69" class="arrow">
+                <img src="img/arrow-left.png" width="69" height="69" class="arrow" alt="arrow" />
             </div>
             
             <div class="hidden-hover-info" id="hidden-experiance"> 
                 <h2>Collaborate to create interactive web-applications and elegant websites.</h2>
                 <p>I have worked with start-ups and small businesses to create unique user experiances.  Features include: social dashboards, informative websites, real-time data plotting, API integration.</p>
-                <img src="img/arrow-right.png" width="69" height="69" class="arrow">
+                <img src="img/arrow-right.png" width="69" height="69" class="arrow" alt="arrow"/>
             </div>
         </div>
 
@@ -121,96 +125,112 @@ Last updated 6/3/2013
             </div>
         </div>
         
-        
-<br /><br />
-    <div class="horizontal-line"></div>
-    <div class="horizontal-line2"></div>
-    
-        <div class="social-feeds">
-            <h1>Latest from Twitter</h1>
-            <br/>
-            <h5>OMG did you watch GOT? #whatthewhat</h5>
-            <br/>
-            <p>about 6 hours ago</p>
-            <br/>
-            <button>Follow-me!</button>
-        </div>
-        <br/><br/><br/>
-        
-    <div class="horizontal-line"></div>
-    <div class="horizontal-line2"></div>
-    
-        <div class="social-feeds">
-            <h1>Latest from Instagram</h1>
-            <br/>
-            <img src="img/karen-paris.png" alt="" width="200px" height="200px"/><img src="img/karen-paris.png" alt="" width="200px" height="200px" /><img src="img/karen-paris.png" alt="" width="200px" height="200px" /><img src="img/karen-paris.png" alt="" width="200px" height="200px" />
-            <br/><br/><button>Follow-me!</button>
-        </div>
-        
+          
         
     </div>
+    <h1></h1>
+    <br /> <br /> 
 </div>
 
-<div id="projects">
+<div id="projects" class="location">
     <div class="black-block"></div>
+    <h1></h1>
     <div class="teal-block">
-        I <span class="bold-italic white" id="love"> love </span><img src="img/heart.png" alt="heart" id="heart">designing and creating beautiful easy to use websites!
+        I <span class="bold-italic white" id="love"> love </span><img src="img/heart.png" id="heart" alt="heart" />designing and creating beautiful easy to use websites!
         <br />I've developed the front-end UI for start-ups and created websites for small businesses.
-        <br/><span class="white"> Check out </span> the projects built from the ground up. 
+        <br/><span class="white" id="check"> Check out</span><img src="img/sunglass.png" id="sunglass" alt="sunglass" /> the projects built from the ground up. 
     </div>
+    <h1></h1>
     <div class="white-block">
-        <a href="http://karensuda.com/Desai/index.html"><img src="img/desai.png" alt="" class="thumbnail" /></a>
-        <a href="http://www.nasc-inc.com/"><img src="img/nasc.png" alt="" class="thumbnail" /></a>
+        <a href="http://karensuda.com/Desai/index.html" target="_blank"><img src="img/desai.png" alt="" class="thumbnail" /></a>
+        <a href="http://www.nasc-inc.com/" target="_blank"><img src="img/nasc.png" alt="" class="thumbnail" /></a>
         <br />
-        <a href="http://karensuda.com/Thinkful_Projects/BayAreaHiker/index.html"><img src="img/bah.png" alt="" class="thumbnail" /></a>
-        <a href="http://karensuda.com/snow/index.php"><img src="img/snow.png" alt="" class="thumbnail" /></a>
+        <a href="http://karensuda.com/Thinkful_Projects/BayAreaHiker/index.html" target="_blank"><img src="img/bah.png" alt="" class="thumbnail" /></a>
+        <a href="http://karensuda.com/snow/index.php" target="_blank"><img src="img/snow.png" alt="" class="thumbnail" /></a>
         <br />
-        <a href="http://okashiica.com/"><img src="img/okashii.png" alt="" class="thumbnail" /></a>
-        <a href="http://www.treeshipcapital.com/"><img src="img/tree.png" alt="" class="thumbnail" /></a>
+        <a href="http://okashiica.com/" target="_blank"><img src="img/okashii.png" alt="" class="thumbnail" /></a>
+        <a href="http://www.treeshipcapital.com/" target="_blank"><img src="img/tree.png" alt="" class="thumbnail" /></a>
         <br />
-        <a href="http://www.edentaiko.com/"><img src="img/taiko.png" alt="" class="thumbnail" /></a>
-        <a href="http://karensuda.com/"><img src="img/karen.png" alt="" class="thumbnail" /></a>
+        <a href="http://www.edentaiko.com/" target="_blank"><img src="img/taiko.png" alt="" class="thumbnail" /></a>
+        <a href="http://karensuda.com/" target="_blank"><img src="img/karen.png" alt="" class="thumbnail" /></a>
     </div>
+    <h1></h1>
+    <br /><br /> 
 </div>
 
-<div id="contact">
+
+
+<div id="latest" class="location">
     <div class="black-block"></div>
+    <h1></h1>
+    <div class="social-feeds">
+        <h1>Latest from Twitter</h1>
+        <br/>
+        <h5>OMG did you watch GOT? #whatthewhat</h5>
+        <br/>
+        <p>about 6 hours ago</p>
+        <br/>
+        <button class="custom-button">Follow-me!</button>
+    </div>
+    <br/><br/><br/>
+        
+    <div class="horizontal-line"></div>
+    <div class="horizontal-line2"></div>
+    
+    <div class="social-feeds">
+        <h1>Latest from Instagram</h1>
+        <br/>
+        <img src="img/karen-paris.png" alt="" width="200px" height="200px"/><img src="img/karen-paris.png" alt="" width="200px" height="200px" /><img src="img/karen-paris.png" alt="" width="200px" height="200px" /><img src="img/karen-paris.png" alt="" width="200px" height="200px" />
+        <br/><br/><button class="custom-button">Follow-me!</button>
+    </div>
+    <h1></h1>
+    <br /><br /> 
+</div>
+
+
+<div id="contact" class="location">
+    <div class="black-block"></div>
+    <h1></h1>
     <div class="teal-block">
-        Let's be friends. Send me some love! There's nothing better then working with good people =)
+        Let's be friends. There's nothing better then working with good people =)
         <br/><span class="bold-italic"> Get in Touch: </span>Checkout my <a href="https://github.com/ksudac" class="white" target="_blank">GitHub,</a>
         Like me on <a href="https://www.facebook.com/k.sudacederquist" class="white" target="_blank">Facebook,</a><br/>contact me on <a href="http://www.linkedin.com/pub/karen-suda-cederquist/18/320/303" class="white" target="_blank">LinkedIn</a>
         or drop me a line to <span class="white say-hello">Say Hello!</span>
         <br/>
-        <div class="karen-image"/><img src="img/karensuda3.png" alt=""/></div>
-        <div class="karen-image-hidden"/><img src="img/karensuda4.png" alt=""/></div>
-        <div class="karen-arrow"/><img src="img/arrow-right-down.png" alt="" class=""/></div>
+        <div class="karen-image"><img src="img/karensuda3.png" alt=""/></div>
+        <div class="karen-image-hidden"><img src="img/karensuda4.png" alt=""/></div>
+        <div class="karen-arrow"><img src="img/arrow-right-down.png" alt="" class=""/></div>
     </div>
+    
     <div class="clear"></div>
     <div class="white-block">
-        <form>
+        <form method="post" action="processs.php" id="myForm" name="myForm">
         <table class="form-table">
             <tr>
-                <td class="head">Name:</td>
-                <td><input type="text" placeholder="Your Name"/></td>
+                <td class="head"><label id="name_label" for="name">Name: </label></td>
+                <td><input type="text" value="" placeholder="Your Name" id="name" name="name"/></td>
             </tr>
             <tr>
-                <td class="head">Email: </td>
-                <td><input type="text" placeholder="Your Email"/></td>
+                <td class="head"><label id="email_label" for="email">Email: </label></td>
+                <td><input type="text" value="" placeholder="Your Email" id="email" name="email"/></td>
             </tr>
             <tr>
-                <td class="head">Subject: </td>
-                <td><input type="text" placeholder="Hello Karen!"/></td>
+                <td class="head"><label id="subject_label" for="subject">Subject: </label></td>
+                <td><input type="text" value=""  placeholder="Hello Karen!" id="subject" name="subject"/></td>
             </tr>
             <tr>
-                <td class="head">Message: </td>
-                <td><textarea placeholder="I'm working on a killer project and would love to get in contact with you, can we meet for coffee this Thursday?" class="message"></textarea></td>
+                <td class="head"><label id="message_label" for="message">Message: </label></td>
+                <td><textarea rows="auto" cols="auto" value="" id="message" name="message" placeholder="I'm working on a killer project and would love to get in contact with you, can we meet for coffee this Thursday?" class="message"></textarea></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Email Me!"></td>
+                <td><input type="submit" name="submit" value="Email Me!" class="custom-button"/></td>
             </tr>
         </table>
         </form>
+        
+       
+        
     </div>
     
     <div class="white-spacer"></div>       
@@ -218,14 +238,14 @@ Last updated 6/3/2013
     
     <table class="contact-table">
         <tr class="contact-icon">
-            <td><a href="href="mailto:ksudac@gmail.com"" class="email" target="_blank"><img src="img/email.png" alt="" class="bounce-icon"/></a></td>
+            <td><a href="mailto:ksudac@gmail.com" class="email" target="_blank"><img src="img/email.png" alt="" class="bounce-icon"/></a></td>
             <td><img src="img/phone.png" alt="" class="bounce-icon"/></td>
             <td><a href="https://www.facebook.com/k.sudacederquist" class="white" target="_blank"><img src="img/facebook.png" alt="" class="bounce-icon"/></a></td>
             <td><a href="http://www.linkedin.com/pub/karen-suda-cederquist/18/320/303" class="white" target="_blank"><img src="img/linkedin.png" alt="" class="bounce-icon"/></a></td>
             <td><a href="https://github.com/ksudac" class="white" target="_blank"><img src="img/github.png" alt="" class="bounce-icon"/></a></td>
         </tr>
         <tr class="contact-title">
-            <td><a href="href="mailto:ksudac@gmail.com"" class="email" target="_blank">EMAIL</a></td>
+            <td><a href="mailto:ksudac@gmail.com" class="email" target="_blank">EMAIL</a></td>
             <td>PHONE</td>
             <td><a href="https://www.facebook.com/k.sudacederquist" class="white" target="_blank">FACEBOOK</a></td>
             <td><a href="http://www.linkedin.com/pub/karen-suda-cederquist/18/320/303" class="white" target="_blank">LINKED IN</a></td>
@@ -242,7 +262,8 @@ Last updated 6/3/2013
     
     
     <div class="white-spacer"></div>
-    
+    <h1></h1>
+    <br /><br /> 
 </div>
 
 
@@ -250,8 +271,8 @@ Last updated 6/3/2013
 
 <div class="black-footer">
     <br /><br /><br />&#169; 2013 Karen Suda Web Development. - karensuda.com - ksudac@gmail.com <br />
-    <ul class="navigation navigation-smaller">
-        <li><a href="index.html" title="home">Home</a></li>
+    <ul class="navigation-smaller">
+        <li><a href="#home" title="home">Home</a></li>
         <li><a href="#about" title="about">About</a></li>
         <li><a href="#projects" title="street-cred">Street Cred</a></li>
         <li><a href="#contact" title="contact">Contact</a></li>
@@ -260,6 +281,7 @@ Last updated 6/3/2013
     
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.viewport.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
