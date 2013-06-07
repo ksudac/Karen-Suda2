@@ -6,6 +6,8 @@ $(document).ready(function() {
     setDate();
     iconAnimation();
     aboutPills();
+    twitterFeed();
+    instagramFeed();
     contactAnimation();
     resizeContact();
 });
@@ -136,8 +138,28 @@ function aboutPills(){
     });
 }
 
+function twitterFeed(){
+    $.getJSON("https://api.twitter.com/1/statuses/user_timeline/ksudac99.json?count=1&include_rts=1&callback=?", function(data) {
+        $('#tweet').text(data[0].text);
+        $('#date').text($.timeago(data[0].created_at));
+    });    
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+}
 
 
+function instagramFeed(){
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/users/38240188/media/recent/?access_token=38240188.5b9e1e6.a7e35a8f307d4d78b98fd56b630022be",
+        success: function(data) {
+            for (var i = 0; i < 4; i++) {
+                $(".instagram").append("<a target='_blank' href='" + data.data[i].link + "'><img class='instagram-photo' src='" + data.data[i].images.low_resolution.url +"'></img></a>");
+            }
+        }
+    });
+}
 
 function contactAnimation() {
     $('.say-hello').on('mouseover', function(){
