@@ -84,7 +84,6 @@ body{
     margin: -35px auto 0 auto;
 }
 
-
 .home-spacer{
     width:100%;
     height:400px;
@@ -144,23 +143,6 @@ body{
     background-color: black;
 }
 
-.black-footer{
-    width:100%;
-    height:80px;
-    background-color: black;
-    text-align: center;
-    color: #fcf5e9;
-    font-size: 10pt;
-    padding-top: 40px;
-}
-
-.thumbnail{
-    width:350px;
-    height:auto;
-    border: solid thick white;
-    margin:20px;
-}
-
 #hidden-social-nav{
     display: none;
 }
@@ -188,56 +170,41 @@ ul.socialicons li a.facebook:hover  { background-position: -38px -73px; }
 }
 
 .bold-italic{
- font-weight: 900;
- font-style: italic;
+    font-weight: 900;
+    font-style: italic;
 }
 
-
-td{
-    text-align: left;
-    line-height: 20px;
-    vertical-align: top;
-    padding: 2px;
-    min-width: 100px;
-}
-.head{
-    padding-top:7px;
+.teal-block > a {
+    text-decoration: none;
 }
 
-input[type="text"], textarea{
-    width:400px;
-    line-height: 16px;
+.teal-block > a:hover {
+    text-decoration: underline;
 }
 
-input[type="submit"]{
-    float: right;
+.about-me{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    list-style: none;
+    padding: 0 0 30px 0;  
 }
 
-.message{
-    height:70px;
+.about-me > li{
+    display: inline-block;
+    text-align: justify;
+    vertical-align: middle;
+    padding: 10px;
 }
 
-.form-table{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -100px;
+.about-text {
+    width:360px;
+    line-height: 18px;
+    font-size: 11pt;
 }
 
-.karen-image, .karen-image-hidden{
-    float: right;
-    margin-right: 60px;
-    margin-top: -50px;
-}
-
-.karen-arrow > img{
-    width: 120px;
-    height: auto;
-    float: right;
-    margin-right: 20px;
-}
-
-.karen-arrow, .karen-image-hidden {
-    display: none;
+.about-img{
+    width:250px;
+    text-align: center;
 }
 
 #paris-bw{
@@ -301,73 +268,29 @@ input[type="submit"]{
     clear: both;
 }
 
-.teal-block > a {
-    text-decoration: none;
+.karen-image, .karen-image-hidden{
+    float: right;
+    margin-right: 60px;
+    margin-top: -50px;
 }
 
-.teal-block > a:hover {
-    text-decoration: underline;
+.thumbnail{
+    width:350px;
+    height:auto;
+    border: solid thick white;
+    margin:20px;
 }
 
-.contact-table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.karen-arrow > img{
+    width: 120px;
+    height: auto;
+    float: right;
+    margin-right: 20px;
 }
 
-
-.contact-account > td, .contact-title > td{
-    width: 160px;
-    text-align: center;
+.karen-arrow, .karen-image-hidden {
+    display: none;
 }
-
-.contact-icon > td {
-    width: 80px;
-    padding-left: 40px;
-}
-
-.contact-title > td > a, .contact-title  {
-    color: #d03248;
-    font-size: 12pt;
-    text-align: center;
-    text-decoration: none;
-}
-
-.contact-title > td > a:hover  {
-    text-decoration: underline;
-}
-
-.contact-account {
-    color: #8dc3d1;
-    font-size: 12pt;
-    text-align: center;
-}
-
-.about-me{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 10pt;
-    list-style: none;
-    padding: 0 0 30px 0;
-    
-}
-.about-me > li{
-    display: inline-block;
-    text-align: justify;
-    vertical-align: middle;
-    padding: 10px;
-}
-
-.about-text {
-    width:360px;
-    line-height: 18px;
-    font-size: 11pt;
-}
-
-.about-img{
-    width:250px;
-    text-align: center;
-}
-
 
 .horizontal-line{
 	background-color: #ded8d6;
@@ -379,7 +302,6 @@ input[type="submit"]{
 	margin-top: 40px;
         margin-bottom:40px;
 }
-
 
 .pill-box{
     text-align: center;
@@ -400,7 +322,6 @@ input[type="submit"]{
     background: -o-linear-gradient(top, ffffff, #efeeef);
     display: inline-block;
 }
-
 
 .hidden-hover-info > p{
     text-align: center;
@@ -467,11 +388,6 @@ input[type="submit"]{
     font-size: 40pt;
 }
 
-.social-feeds{
-    padding: 50px;
-    text-align: center;
-}
-
 .custom-button{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -505,6 +421,11 @@ input[type="submit"]{
 .custom-button > img {
     margin-bottom: -3px;
     padding-left: 10px;
+}
+
+.social-feeds{
+    padding: 50px;
+    text-align: center;
 }
 
 .instagram-photo{
@@ -583,4 +504,83 @@ input[type="submit"]{
 #form-response{
     text-align:center;
     line-height: 23px;
+}
+
+.ff2 #message, .ff3 #message {
+    font-family: 'Lucida Grande';
+    font-size: 8pt;
+}
+
+.contact-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.contact-account > td, .contact-title > td{
+    width: 160px;
+    text-align: center;
+}
+
+.contact-icon > td {
+    width: 80px;
+    padding-left: 40px;
+}
+
+.contact-title > td > a, .contact-title  {
+    color: #d03248;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-title > td > a:hover  {
+    text-decoration: underline;
+}
+
+.contact-account {
+    color: #8dc3d1;
+    font-size: 12pt;
+    text-align: center;
+}
+
+td{
+    text-align: left;
+    line-height: 20px;
+    vertical-align: top;
+    padding: 2px;
+    min-width: 100px;
+}
+.head{
+    padding-top:7px;
+}
+
+input[type="text"], textarea{
+    width:400px;
+    line-height: 16px;
+}
+
+input[type="submit"]{
+    float: right;
+}
+
+.message{
+    height:70px;
+}
+
+.form-table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+}
+
+.black-footer{
+    width:100%;
+    height:80px;
+    background-color: black;
+    text-align: center;
+    color: #fcf5e9;
+    font-size: 10pt;
+    padding-top: 40px;
 }

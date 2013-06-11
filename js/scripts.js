@@ -1,57 +1,17 @@
 $(document).ready(function() {
-    resizeHome();
-    navigationHighlight(); 
-    scrollNavigationHighlight();
-    navigationScroll();
-    setDate();
-    iconAnimation();
-    aboutPills();
-    aboutPhoto();
-    contactForm();
-    contactAnimation();
-    resizeContact();
+    resizeHome();                   //resize the home screen to show all black
+    setDate();                      //Set day and home screen greeting
+    scrollNavigationHighlight();    //Add circle to navigation when scrolling and clicked. Find nearest <h1>
+    navigationScroll();             //Scroll the navigation to selected anchor tag
+    iconAnimation();                //animate 'white' text on seciton headers to be replaced by image
+    aboutPills();                   //show the hidden infomration on the 'about' boxes
+    aboutPhoto();                   //change Karen 'about' photo to black and white
+    contactForm();                  //respond to form submittal 
+    contactAnimation();             //Amimate hover items in the'contact' section, bounce icons, change Karen photo, add arrow
+    resizeContact();                //resize the contact sections to take up full screen
+    instagramFeed();                //get Karen's instagram feed
+    twitterFeed();                  //get karen's twitter feed
 });
-
-
-function navigationHighlight(){
-    $('.navigation a').click(function(){
-         //$('.navigation li').removeClass('nav-selected');
-         //$(this).closest('.highlight').addClass('nav-selected');
-    });
-    $('.navigation-smaller a').click(function(){
-         $('.navigation li').removeClass('nav-selected');
-    });
-}
-
-function scrollNavigationHighlight(){
-    $(window).scroll(function () {
-        var inview = '#' + $('.location > h1:in-viewport:first').parent().attr('id');
-        $link = $('.navigation li > a[href$="' + inview + '"]');
-       
-        if($link.length && (inview != '#home')){    
-            $('.navigation li').removeClass('nav-selected');
-            $link.closest('.highlight').addClass('nav-selected');
-            $('#hidden-social-nav').show();
-        }
-        if(inview == '#home'){    
-            $('#hidden-social-nav').hide();
-            $('.navigation li').removeClass('nav-selected');
-        }
-    });
-}
-    
-
-function navigationScroll() {
-    $('.navigation a').click(function(){
-    goToByScroll($(this).attr('href'));
-    return false;
-    });
-}
-
-
-function goToByScroll(id) {
-    $('html,body').animate({scrollTop: $(id).offset().top},'slow');
-}
 
 
 function setDate() {
@@ -71,7 +31,39 @@ function setDate() {
 }
 
 
-function iconAnimation() {
+function scrollNavigationHighlight(){
+    $(window).scroll(function () {
+        //find the hidden <h1> and find the parent anchor tag (href)
+        var inview = '#' + $('.location > h1:in-viewport:first').parent().attr('id');
+        $link = $('.navigation li > a[href$="' + inview + '"]');
+
+        if($link.length && (inview != '#home')){    //Circle the anchor to show what section the user is on
+            $('.navigation li').removeClass('nav-selected');
+            $link.closest('.highlight').addClass('nav-selected');
+            $('#hidden-social-nav').show();
+        }
+        if(inview == '#home'){    //hide social navigation and hide location circle
+            $('#hidden-social-nav').hide();
+            $('.navigation li').removeClass('nav-selected');
+        }
+    });
+}
+    
+
+function navigationScroll() {  //scroll to anchor tag when navigation is clicked
+    $('.navigation a').click(function(){
+        goToByScroll($(this).attr('href'));
+        return false;
+    });
+}
+
+
+function goToByScroll(id) { //scroll to anchor tag when navigation is clicked
+    $('html,body').animate({scrollTop: $(id).offset().top},'slow');
+}
+
+
+function iconAnimation() {  //hide header words and show icons 
     $('#love').on('mouseover', function(){
         $('#heart').show();
         $(this).hide();
@@ -95,17 +87,20 @@ function fadeLoveIn() {
     $('#love').fadeIn("fast");
 }
 
+
 function fadeSfIn() {
     $('#ggbridge').hide();
     $('#sanfran').fadeIn("fast");
 }
+
 
 function fadeCheckIn() {
     $('#sunglass').hide();
     $('#check').fadeIn("fast");
 }
 
-function aboutPhoto(){
+
+function aboutPhoto(){  //change the about photo from color to black and white
     $('#paris-color').on('mouseover', function(){
         $('#paris-bw').show();
         $(this).hide();
@@ -117,40 +112,34 @@ function aboutPhoto(){
 }
 
 
-function aboutPills(){
-    
+function aboutPills(){ //change 'about' boxes to show hidden content on hover
     $('#pill-education').on('mouseover', function(){
         $('#hidden-education').show();
         $('#hidden-title').hide();
     });
-    
     $('#pill-education').on('mouseout', function(){
         $('#hidden-education').hide();
         $('#hidden-title').show();
     });
-    
     $('#pill-experiance').on('mouseover', function(){
         $('#hidden-experiance').show();
         $('#hidden-title').hide();
     });
-    
     $('#pill-experiance').on('mouseout', function(){
         $('#hidden-experiance').hide();
         $('#hidden-title').show();
     });
-    
     $('#pill-certificate').on('mouseover', function(){
         $('#hidden-certificate').show();
         $('#hidden-title').hide();
     });
-    
     $('#pill-certificate').on('mouseout', function(){
         $('#hidden-certificate').hide();
         $('#hidden-title').show();
     });
 }
 
-function contactAnimation() {
+function contactAnimation() { //animate items in 'contact' section. Show the hidden arrow, show the hidden color Karen image, and bounce the contact icons on hover
     $('.say-hello').on('mouseover', function(){
         $('.karen-arrow').show();
         $('.karen-image').hide();
@@ -167,7 +156,7 @@ function contactAnimation() {
 }
 
 
-function resizeContact() {
+function resizeContact() { //resize 'contact' section to take up entire screen
     window.onload = methodToFixLayout();
     $(window).bind("resize", methodToFixLayout);
     function methodToFixLayout( e ) {
@@ -177,7 +166,7 @@ function resizeContact() {
     }
 }
 
-function resizeHome() {
+function resizeHome() { //resize 'home' to take up entire screen
     window.onload = methodToFixLayout();
     $(window).bind("resize", methodToFixLayout);
     function methodToFixLayout( e ) {
@@ -187,8 +176,29 @@ function resizeHome() {
     }
 }
 
-function contactForm() {
+function contactForm() { //repond to users when they send an email
     $('#myForm').ajaxForm(function() { 
         $('#form-response').html("<p>We will be in touch soon.</p>");
     }); 
+}
+
+function twitterFeed(){ //get more recent twitter feed
+    $.getJSON("https://api.twitter.com/1/statuses/user_timeline/ksudac99.json?count=1&include_rts=1&callback=?", function(data) {
+      $('#tweet').text(data[0].text);
+      $('#date').text($.timeago(data[0].created_at));
+    });    
+}
+
+function instagramFeed(){ //get more recent instagram feed
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/users/38240188/media/recent/?access_token=38240188.5b9e1e6.a7e35a8f307d4d78b98fd56b630022be",
+        success: function(data) {
+            for (var i = 0; i < 4; i++) {
+                $(".instagram").append("<a target='_blank' href='" + data.data[i].link + "'><img class='instagram-photo' width='220px' height='220px' src='" + data.data[i].images.low_resolution.url +"'></img></a>");
+            }
+        }
+    });
 }
