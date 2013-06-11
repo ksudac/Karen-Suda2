@@ -3,10 +3,21 @@ html{
 }
 
 body{
-    font-family: 'Josefin Slab', serif;
     font-size: 16pt;
     background-color: #fcf5e9;
     min-width: 1060px;
+    font-family: 'josefin_sans_stdlight';
+}
+
+@font-face {
+    font-family: 'josefin_sans_stdlight';
+    src: url('../fonts/josefinsansstd-light-webfont.eot');
+    src: url('../fonts/josefinsansstd-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsansstd-light-webfont.woff') format('woff'),
+         url('../fonts/josefinsansstd-light-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsansstd-light-webfont.svg#josefin_sans_stdlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .h3, h3{
@@ -69,10 +80,27 @@ body{
     z-index: 20;
 }
 
+.ie .logo{
+    margin: -35px auto 0 auto;
+}
+
+
 .home-spacer{
     width:100%;
     height:400px;
     background-color: black;
+    color:white;
+    font-size: 70pt;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.location{
+    margin-bottom: 40px;
+}
+
+#home{
+    margin-bottom: -40px !important;
 }
 
 .nav-block{
@@ -107,6 +135,7 @@ body{
     text-align: center;
     line-height: 29px;
     padding-top: 23px;
+    margin-bottom: 30px;
 }
 
 .black-block{
@@ -117,11 +146,12 @@ body{
 
 .black-footer{
     width:100%;
-    height:120px;
+    height:80px;
     background-color: black;
     text-align: center;
     color: #fcf5e9;
     font-size: 10pt;
+    padding-top: 40px;
 }
 
 .thumbnail{
@@ -210,12 +240,25 @@ input[type="submit"]{
     display: none;
 }
 
+#paris-bw{
+    display: none;
+}
+
 #heart{
     display: none;
-    padding-left:12px;
-    padding-right:11px;
+    padding-left:9px;
+    padding-right:10px;
     margin-top: -5px;
     margin-bottom:-5px;
+}
+
+.ff2 #heart, .ff3 #heart {
+    padding-left:10px;
+}
+
+.ie #heart {
+    padding-right:8px;
+    padding-left:8px;
 }
 
 #ggbridge{
@@ -226,12 +269,32 @@ input[type="submit"]{
     margin-bottom:-5px;
 }
 
+.ff2 #ggbridge, .ff3 #ggbridge {
+    padding-left:13px;
+    padding-right:12px;
+}
+
+.ie #ggbridge {
+    padding-left:13px;
+    padding-right:12px;
+}
+
 #sunglass{
     display: none;
-    padding-left:3px;
-    padding-right:3px;
+    padding-left:1px;
+    padding-right:2px;
     margin-top: -5px;
     margin-bottom:-2px;
+}
+
+.ff2 #sunglass, .ff3 #sunglass {
+    padding-left:3px;
+    padding-right:3px;
+}
+
+.ie #sunglass {
+    padding-left:3px;
+    padding-right:3px;
 }
 
 .clear{
@@ -281,7 +344,7 @@ input[type="submit"]{
 }
 
 .about-me{
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 10pt;
     list-style: none;
     padding: 0 0 30px 0;
@@ -291,12 +354,13 @@ input[type="submit"]{
     display: inline-block;
     text-align: justify;
     vertical-align: middle;
-    padding: 20px;
+    padding: 10px;
 }
 
 .about-text {
-    width:340px;
+    width:360px;
     line-height: 18px;
+    font-size: 11pt;
 }
 
 .about-img{
@@ -312,30 +376,16 @@ input[type="submit"]{
         text-align: center;
 	height:1px;
 	width:90%;
-	margin-bottom: 0;
-	margin-top: 4px;
+	margin-top: 40px;
+        margin-bottom:40px;
 }
-
-.horizontal-line2{
-	background-color: silver;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-	height:1px;
-	width:90%;
-	margin-bottom: 10px;
-	margin-top: 0;
-}
-
-
-
-
 
 
 .pill-box{
     text-align: center;
     padding: 20px;
     margin: 20px;
+    margin-top: 40px;
     height:230px;
     width:170px;
     color: black;
@@ -410,11 +460,11 @@ input[type="submit"]{
 }
 
 .hidden-hover-info > h2 {
-    font-size: 32pt;
+    font-size: 38pt;
 }
 
 .hidden-hover-info > h1 {
-    font-size: 38pt;
+    font-size: 40pt;
 }
 
 .social-feeds{
@@ -443,6 +493,10 @@ input[type="submit"]{
 	    0px 1px 3px rgba(000,000,000,0.5), inset 0px 0px 1px rgba(255,255,255,0.7);
 }
 
+.ie .custom-button{
+    background: #ba4355;
+}
+
 .custom-button:hover{
     background: #ba4355;
     color:silver;
@@ -454,11 +508,18 @@ input[type="submit"]{
 }
 
 .instagram-photo{
-    border:0 solid ;
-    border-radius:150px;
-    padding:10px;
+    border-radius:120px;
+    -webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+    margin:10px;
     width:220px;
-    height:auto;
+    height:220px;
+    -webkit-box-shadow: 0 0 1px #000;
+}
+
+.social-feeds  {
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 
 .social-feeds > h1 {
@@ -468,7 +529,8 @@ input[type="submit"]{
 .social-name {
     color:#d03248;
     font-size: 24pt;
-    padding:30px;
+    padding-top:5px;
+    padding-bottom:30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
 }
@@ -516,5 +578,9 @@ input[type="submit"]{
     background: #c8c8c8;
     color: gray;
     cursor: pointer;
-    
+}
+
+#form-response{
+    text-align:center;
+    line-height: 23px;
 }
