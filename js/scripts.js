@@ -6,6 +6,7 @@ $(document).ready(function() {
     iconAnimation();                //animate 'white' text on seciton headers to be replaced by image
     aboutPills();                   //show the hidden infomration on the 'about' boxes
     aboutPhoto();                   //change Karen 'about' photo to black and white
+    toolTips()                      //Street-cred tooltips
     contactForm();                  //respond to form submittal 
     contactAnimation();             //Amimate hover items in the'contact' section, bounce icons, change Karen photo, add arrow
     resizeContact();                //resize the contact sections to take up full screen
@@ -52,14 +53,8 @@ function scrollNavigationHighlight(){
 
 function navigationScroll() {  //scroll to anchor tag when navigation is clicked
     $('.navigation a').click(function(){
-        goToByScroll($(this).attr('href'));
-        return false;
+        $('html,body').animate({scrollTop: $($(this).attr('href')).offset().top},'slow');
     });
-}
-
-
-function goToByScroll(id) { //scroll to anchor tag when navigation is clicked
-    $('html,body').animate({scrollTop: $(id).offset().top},'slow');
 }
 
 
@@ -137,6 +132,10 @@ function aboutPills(){ //change 'about' boxes to show hidden content on hover
         $('#hidden-certificate').hide();
         $('#hidden-title').show();
     });
+}
+
+function toolTips(){
+    $(".thumbnail").tooltip({ position: {  my: "center bottom", at: "center bottom" } });
 }
 
 function contactAnimation() { //animate items in 'contact' section. Show the hidden arrow, show the hidden color Karen image, and bounce the contact icons on hover

@@ -585,3 +585,23 @@ input[type="submit"]{
     font-size: 10pt;
     padding-top: 40px;
 }
+
+.ui-tooltip {
+    background:#000000;
+    color: #ffffff;
+    text-align: center;
+    width:350px;
+    position: absolute;
+
+    font-size: 12pt;
+    padding: 5px;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0) transparent;
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+}
